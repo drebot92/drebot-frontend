@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Drebot Front-End Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Source Sans Pro, Arial, sans-serif;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .wrapper {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -ms-align-items: center;
+        align-items: center;
+        justify-content: center;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        padding: 40px;
+        min-height: 100vh;
+        background-color: #eee;
+      }
+      .container {
+        flex-grow: 1;
+        margin: auto;
+        max-width: 1200px;
+        width: 100%;
+        border-radius: 6px;
+        background-color: #fff;
+        border: solid 2px #eaeaea;
+      }
+      .header {
+        padding: 30px;
+        border-bottom: solid 2px #eaeaea;
+        text-align: center;
+      }
+      .header__title {
+        margin: 0;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+      .header__sub-title {
+        margin: 0;
+        font-weight: 300;
+        color: #888;
+      }
+      .project-list {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        margin: 0;
+        padding: 15px;
+        list-style: none;
+      }
+      .project-list li {
+        flex: 0 1 auto;
+        padding: 15px;
+      }
+      .project-list a {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -ms-align-items: center;
+        align-items: center;
+        padding: 15px 30px;
+        border-radius: 4px;
+        border: solid 2px #eee;
+        background-color: #fff;
+        font-size: 18px;
+        letter-spacing: .2px;
+        color: black;
+        text-decoration: none;
+        transition: background-color .2s ease-in-out;
+      }
+      .project-list a:hover {
+        background-color: #eee;
+      }
+      .project-list img {
+        flex: 0 0 auto;
+        margin-right: 15px;
+        width: 26px;
+        height: 26px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="wrapper">
+      <main class="container">
+        <header class="header">
+          <h1 class="header__title">Drebot Vladyslav</h1>
+          <p class="header__sub-title">HTML/CSS/JS Portfolio</p>
+        </header>
+        <ul class="project-list">
+          <li>
+            <a href="https://usersproof.herokuapp.com" target="_blank">
+              <img src="https://usersproof.herokuapp.com/images/favicon-16x16.png" alt="usersproof icon">
+              <span>Usersproof</span>
+            </a>
+          </li>
+          <li>
+            <a href="annova" target="_blank">
+              <img src="annova/images/favicon-16x16.png" alt="annova icon">
+              <span>Annova</span>
+            </a>
+          </li>
+          <li>
+            <a href="hitman" target="_blank">
+              <img src="hitman/images/favicon-16x16.svg" alt="hitman icon">
+              <span>Hitman</span>
+            </a>
+          </li>
+          <li>
+            <a href="noname" target="_blank">
+              <img src="noname/images/favicon-16x16.svg" alt="noname icon">
+              <span>Noname</span>
+            </a>
+          </li>
+        </ul>
+      </main>
+    </section>
+  </body>
+</html>

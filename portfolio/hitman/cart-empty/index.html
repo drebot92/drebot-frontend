@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HitMan | Cart</title>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="/hitman/images/favicon-16x16.svg" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&amp;amp;subset=cyrillic" rel="stylesheet">
+    <link href="/hitman/css/style_vendor.min.css" rel="stylesheet">
+    <link href="/hitman/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="preloader">
+      <svg class="preloader__img" xmlns="http://www.w3.org/2000/svg" width="180" height="140" viewbox="0 0 180 140">
+        <style>
+          @keyframes head {
+            0% {
+              transform: translateX(40px);
+            }
+            25% {
+              transform: translateX(20px);
+            }
+            35% {
+              transform: translateX(40px);
+            }
+            100% {
+              transform: translateX(40px);
+            }
+          }
+          @keyframes magazine {
+            0% {
+              transform: translate(0, 0);
+            }
+            45% {
+              transform: translate(0, 0);
+            }
+            65% {
+              transform: translate(-16px, 40px);
+            }
+            100% {
+              transform: translate(0, 0);
+            }
+          }
+          .head {
+            animation: head 1.6s infinite;
+          }
+          
+          .magazine {
+            animation: magazine 1.6s infinite;
+          }
+          
+        </style>
+        <g fill="#373b46" fill-rule="evenodd">
+          <path class="magazine" fill-rule="nonzero" d="M65.0698539 26.1932072L37.4 94.2C36.8 95.3 37.4 96.1 38.2 96.3 40.1 96.9 63.1 100.1 66.9 100.1 68.6 100.1 69.4 99.9 69.5 98.4L69.7 96.7C67.8871229 96.4410176 76.2064468 73.4826025 94.6579717 27.8247549L94.6579836 27.8247598C95.2787866 26.2885979 94.5367417 24.5400324 93.0005798 23.9192294 92.6433998 23.7748836 92.261761 23.7006836 91.8765165 23.7006836L68.77492 23.7006836C67.1479152 23.7006836 65.6830217 24.6861671 65.0698539 26.1932072z"></path>
+          <path fill-rule="nonzero" d="M38.5,22.1 C37.4,22.7 37,23.8 37,24.9 C37,26.2 37.9,27.5 40.6,27.5 C47.6,27.5 51,32.6 51,38.6 C51,42.2 49.7,46 47.4,49.4 L43.4,56.2 C39.8,61.5 30.5,76.4 29.2,84.3 C28.8,86.4 29,87.5 29.8,88.5 C31.1,90 32.8,90.8 34.9,91.3 C35.5,91.5 36.6,91.9 38.5,92.1 L69.7,96.7 C69.7,96.7 70.8,96.9 71.2,96.9 C73.5,96.9 74,94.8 73.8,93.3 C72.9,89.9 74.4,84.1 77.4,83.1 C79.3,82.5 79.5,81.4 79.1,80.1 C78.2,76.1 80,70.5 84.4,69 C85.7,68.6 85.7,67.1 85.3,66.2 C84.5,64.1 84.9,60.9 86.8,58.3 C89.8,54.2 93.2,53.2 95.7,54.9 C97.4,56 100.2,57 103.6,57 L131.9,57 C134,57 134.2,54.9 133.4,53.4 C132.5,51.9 132.1,49.8 132.1,46.4 L132.1,39.6 C132.1,35.6 134.4,33.9 137.4,33.9 L173,33.9 C177.2,33.9 177.9,32.6 177.9,29.2 L177.9,26.2 L178.7,26.2 L179.3,25.6 L179.3,21.5 L178.5,20.7 L39.8,20.7 C39.6,21.4 39.2,21.7 38.5,22.1 Z M127.9,45.7 C127.9,50 124.9,53.6 120.2,53.6 L103.3,53.6 C96.7,53.6 94.2,48.3 94.2,43.8 C94.2,42.3 94.4,41 95,39.8 L96,39.8 C96,44.5 98.8,49 102.2,50.9 L103.5,50.9 L104.3,50.3 L104.3,49 C102.8,47.1 102.2,44.8 102.2,42.8 C102.2,39.2 104.1,36 107.1,35.6 L120.9,34.1 C125.8,33.9 127.9,36.4 127.9,40.5 L127.9,45.7 Z"></path>
+          <rect width="53" height="9" x="127" y="8" rx="1"></rect>
+          <g class="head" fill-rule="nonzero" transform="translate(40)">
+            <path d="M63.9,10.2 L78.2,10.2 C80.1,10.2 81.2,9.6 81.2,6.6 L81.2,4 L60.7,4 L60.7,6.6 C60.7,9.6 61.8,10.2 63.9,10.2 Z"></path>
+            <path d="M139.4,6.6 L137.9,6.6 L137.9,4.9 C137.9,3.8 137.7,3 136.4,3 L134.3,3 L133,1.7 C132.6,1.3 132.1,1.1 131.7,1.1 C130.9,1.1 130.4,1.7 130,3 L83.3,3 L83.3,6.6 C83.3,10.4 81.4,12.1 78.2,12.1 L63.9,12.1 C60.5,12.1 58.8,10.4 58.8,6.6 L58.8,3 L11.1,3 L11.1,0.6 L10.5,0 L9,0 L6.2,3 L2.8,3 C0.7,3 0,3.9 0,5.8 L0,18.4 L5.7,18.4 L5.7,6.4 L7.6,6.4 L7.6,18.5 L10.6,18.5 L10.6,6.4 L12.7,6.4 L12.7,18.5 L15.7,18.5 L15.7,6.4 L17.6,6.4 L17.6,18.5 L20.8,18.5 L20.8,6.4 L22.7,6.4 L22.7,18.5 L25.9,18.5 L25.9,6.4 L28,6.4 L28,18.5 L31,18.5 L31,6.4 L33,6.4 L33,18.5 L139.2,18.5 L140,17.7 L140,7.2 L139.4,6.6 Z"></path>
+          </g>
+        </g>
+      </svg>
+      <div class="preloader__text">Загрузка...</div>
+    </div>
+    <div class="wrap">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-container"><a class="header__logo logo" href="/hitman/"><img src="/hitman/images/logo.svg" alt=""></a>
+              <nav class="nav">
+                <ul class="nav__wrap">
+                  <li class="nav__li nav__category">
+                    <div class="nav__dropdown"><a class="nav__item" href="/hitman/category"><img class="nav__icon" src="/hitman/images/ic/category.svg" alt=""><span class="nav__title">Категории</span></a>
+                      <div class="nav__dropdown-menu nav__dropdown-menu--fw-sm">
+                        <div class="category category--header">
+                          <div class="category__head">
+                            <div class="category__title"><img class="category__icon" src="/hitman/images/ic/grid--outline-selected.svg" alt=""/>Категории</div>
+                            <div class="category__back-btn"><img class="category__back-icon" src="/hitman/images/ic/arrow-left--general.svg" alt=""/>Назад</div>
+                          </div>
+                          <div class="category__list">
+                            <ul>
+                              <li><a href="/hitman/category/single">Оружие ( Airsoft)</a></li>
+                              <li>
+                                <div class="category__sub-list">
+                                  <ul>
+                                    <li>
+                                      <div class="category__sub-list">
+                                        <ul>
+                                          <li><a href="/hitman/category/single">Гирбоксы</a></li>
+                                          <li>
+                                            <div class="category__sub-list">
+                                              <ul>
+                                                <li><a href="/hitman/category/single">Гирбоксы</a></li>
+                                                <li><a href="/hitman/category/single">Моторы</a></li>
+                                                <li><a href="/hitman/category/single">Направляющие </a></li>
+                                                <li><a href="/hitman/category/single">Пружины</a></li>
+                                              </ul>
+                                            </div><a href="/hitman/category/single">Моторы</a>
+                                          </li>
+                                          <li><a href="/hitman/category/single">Направляющие </a></li>
+                                          <li><a href="/hitman/category/single">Пружины</a></li>
+                                        </ul>
+                                      </div><a href="/hitman/category/single">Гирбоксы</a>
+                                    </li>
+                                    <li><a href="/hitman/category/single">Моторы</a></li>
+                                    <li><a href="/hitman/category/single">Направляющие </a></li>
+                                    <li><a href="/hitman/category/single">Пружины</a></li>
+                                    <li><a href="/hitman/category/single">Смазки и силикон</a></li>
+                                    <li><a href="/hitman/category/single">Стволики</a></li>
+                                    <li><a href="/hitman/category/single">Тапет, селектор, контакты и антиреверс</a></li>
+                                    <li><a href="/hitman/category/single">Хоп-ап</a></li>
+                                    <li><a href="/hitman/category/single">Цилиндро-поршневая група</a></li>
+                                    <li><a href="/hitman/category/single">Шестерни и втулки</a></li>
+                                  </ul>
+                                </div><a href="/hitman/category/single">Тюнинг</a>
+                              </li>
+                              <li>
+                                <div class="category__sub-list">
+                                  <ul>
+                                    <li><a href="/hitman/category/single">Активные наушники</a></li>
+                                    <li><a href="/hitman/category/single">Копии касок</a></li>
+                                    <li><a href="/hitman/category/single">Наколенники </a></li>
+                                    <li><a href="/hitman/category/single">Маски защитные</a></li>
+                                    <li><a href="/hitman/category/single">Имитация бронепластин</a></li>
+                                  </ul>
+                                </div><a href="/hitman/category/single">Аксессуари</a>
+                              </li>
+                              <li>
+                                <div class="category__sub-list">
+                                  <ul>
+                                    <li><a href="/hitman/category/single">Мачете</a></li>
+                                    <li><a href="/hitman/category/single">Ножи </a></li>
+                                    <li><a href="/hitman/category/single">Томагавки</a></li>
+                                    <li><a href="/hitman/category/single">Точилки для ножей</a></li>
+                                  </ul>
+                                </div><a href="/hitman/category/single">Одежда</a>
+                              </li>
+                              <li>
+                                <div class="category__sub-list">
+                                  <ul>
+                                    <li><a href="/hitman/category/single">Баулы</a></li>
+                                    <li><a href="/hitman/category/single">Кошельки, чехлы для документов</a></li>
+                                    <li><a href="/hitman/category/single">Однолямочные сумки</a></li>
+                                    <li><a href="/hitman/category/single">Поясные сумки</a></li>
+                                    <li><a href="/hitman/category/single">Транспортные сумки</a></li>
+                                    <li><a href="/hitman/category/single">Чехлы водонепроницаемые</a></li>
+                                    <li><a href="/hitman/category/single">Рюкзаки </a></li>
+                                    <li><a href="/hitman/category/single">Сумки</a></li>
+                                  </ul>
+                                </div><a href="/hitman/category/single">Снаряжение / Амуниция</a>
+                              </li>
+                              <li>
+                                <div class="category__sub-list">
+                                  <ul>
+                                    <li><a href="/hitman/category/single">Гидры</a></li>
+                                    <li><a href="/hitman/category/single">Фляги</a></li>
+                                    <li><a href="/hitman/category/single">Гидраторы </a></li>
+                                  </ul>
+                                </div><a href="/hitman/category/single">Защитное снаряжение</a>
+                              </li>
+                              <li>
+                                <div class="category__sub-list">
+                                  <ul>
+                                    <li><a href="/hitman/category/single">Штурмовые винтовки </a></li>
+                                    <li><a href="/hitman/category/single">Пистолеты-пулеметы</a></li>
+                                    <li><a href="/hitman/category/single">Снайперские винтовки </a></li>
+                                    <li><a href="/hitman/category/single">Дробовики</a></li>
+                                    <li><a href="/hitman/category/single">Пулеметы</a></li>
+                                    <li><a href="/hitman/category/single">Пистолеты </a></li>
+                                    <li><a href="/hitman/category/single">Гранатометы, мины </a></li>
+                                  </ul>
+                                </div><a href="/hitman/category/single">Обувь</a>
+                              </li>
+                              <li><a href="/hitman/category/single">Пули / Шари</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav__li">
+                    <div class="nav__phone">
+                      <p class="p">Телефон: </p><a class="link" href="tel:380503433223">+38 (050) 343-32-23</a>
+                    </div>
+                  </li>
+                  <li class="nav__li">
+                    <div class="nav__shcedule">
+                      <p><span>пн-пт: </span>10:00 - 18:00 <br><span>сб: </span>10:00 - 13:00</p>
+                    </div>
+                  </li>
+                  <li class="nav__li">
+                    <div class="nav__dropdown" id="cart_block"><a class="nav__item nav-cart" data-hover="dropdown" data-toggle="dropdown" href="#"><img class="nav-cart__icon nav__icon" src="/hitman/images/ic/cart.svg" alt=""><span class="nav-cart__price nav__title" id="total_price_ajax"><span id="total_price">79 843</span></span>
+                        <div class="nav__counter nav__counter--field"><span id="total_count_ajax">10</span></div></a>
+                      <div class="nav__dropdown-menu nav__dropdown-menu--fw-xs" id="cart_content">
+                        <div class="nav-cart-list" id="cart_content_ajax">
+                          <div class="nav-cart-list__products">
+                            <div class="nav-cart-list__product"><a class="nav-cart-list__product-photo" href="/hitman/product"><img src="/hitman/images/catalog/1-max-47.jpg" alt="0,20g - 5000 GUARDER" title="0,20g - 5000 GUARDER"></a><a class="nav-cart-list__title" href="/hitman/product">0,20g - 5000 GUARDER</a>
+                              <div class="nav-cart-list__quantity">7</div>
+                              <div class="nav-cart-list__price">74</div><a class="nav-cart-list__product-remove" href="javascript:;" onclick="cart.remove('27');" title="Удалить">x</a>
+                            </div>
+                            <div class="nav-cart-list__product"><a class="nav-cart-list__product-photo" href="/hitman/product"><img src="/hitman/images/catalog/1-max-47.jpg" alt="AUG-A1" title="AUG-A1"></a><a class="nav-cart-list__title" href="/hitman/product">AUG-A1</a>
+                              <div class="nav-cart-list__quantity">125</div>
+                              <div class="nav-cart-list__price">0</div><a class="nav-cart-list__product-remove" href="javascript:;" onclick="cart.remove('28');" title="Удалить">x</a>
+                            </div>
+                            <div class="nav-cart-list__product"><a class="nav-cart-list__product-photo" href="/hitman/product"><img src="/hitman/images/catalog/1-max-47.jpg" alt="AUG-AU-2G" title="AUG-AU-2G"></a><a class="nav-cart-list__title" href="/hitman/product">AUG-AU-2G</a>
+                              <div class="nav-cart-list__quantity">1</div>
+                              <div class="nav-cart-list__price">34500</div><a class="nav-cart-list__product-remove" href="javascript:;" onclick="cart.remove('29');" title="Удалить">x</a>
+                            </div>
+                            <div class="nav-cart-list__total">
+                              <div class="nav-cart-list__total-item"><span class="nav-cart-list__total-text">Сумма:</span>
+                                <div class="nav-cart-list__price">74</div>
+                              </div>
+                              <div class="nav-cart-list__total-item"><span class="nav-cart-list__total-text">Доставка с фиксированной стоимостью доставки:</span>
+                                <div class="nav-cart-list__price">5</div>
+                              </div>
+                              <div class="nav-cart-list__total-item"><span class="nav-cart-list__total-text">Итого:</span>
+                                <div class="nav-cart-list__price">79</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="nav-cart-list__checkout"><a class="btn btn--fill-general" href="/hitman/cart">Перейти в корзину</a><a class="btn btn--fill-accent" href="/hitman/checkout">Оформить заказ</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container-megamenu horizontal mobile-disabled" id="megamenu_56712678">
+            <div class="megamenu-wrapper">
+              <div class="megamenu-pattern">
+                <div class="container">
+                  <div class="header__bottom-container">
+                    <nav class="sub-nav header__bottom-l">
+                      <ul class="sub-nav__wrap megamenu">
+                        <li class="sub-nav__li"><a class="sub-nav__item" href="index.php?route=information/information&amp;information_id=6">Оплата и доставка</a></li>
+                        <li class="sub-nav__li"><a class="sub-nav__item" href="index.php?route=product/special">Помощь</a></li>
+                        <li class="sub-nav__li"><a class="sub-nav__item" href="/hitman/abaut-us">Информация</a></li>
+                        <li class="sub-nav__li"><a class="sub-nav__item" href="index.php?route=information/contact">Контакты</a></li>
+                      </ul>
+                    </nav>
+                    <div class="header__bottom-r">
+                      <div class="search search_form"><span class="ui-helper-hidden-accessible" role="status" aria-live="polite"></span>
+                        <label class="search__input input">
+                          <input class="search__field input__field input-block-level search-query ui-autocomplete-input" id="search_query" type="text" name="search" placeholder="Поиск" value="" autocomplete="off"><span class="search__label input__label">Поиск</span>
+                          <div class="search__autocomplete autocomplete-results" id="autocomplete-results">
+                            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+                          </div>
+                        </label><img class="search__btn" src="/hitman/images/ic/search.svg" alt="">
+                      </div><a class="tel btn btn--fill-default" href="tel:380503433223">+38 (050) 343 32 23</a><a class="call-me btn btn--fill-accent" href="#"><img class="call-me__icon" src="/hitman/images/ic/call-me.svg" alt="">Перезвонить мне</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="section--p50">
+          <h1 class="h1">Корзина покупок</h1>
+          <ul class="breadcrumbs">
+            <li><a class="breadcrumbs__link" href="/hitman/">Главная</a></li>
+            <li><a class="breadcrumbs__link" href="#">Корзина покупок</a></li>
+          </ul>
+        </div>
+        <div class="cart-list">
+          <div class="cart-list__products">
+            <div class="cart-list__head">
+              <p class="cart-list__product-photo-label">Изображение</p>
+              <div class="cart-list__name-label">
+                <p class="cart-list__title-label">Название</p>
+                <p class="cart-list__model-label">Модель</p>
+              </div>
+              <p class="cart-list__quantity-label">Количество</p>
+              <p class="cart-list__price-per-item-label">Цена за шт.</p>
+              <p class="cart-list__price-label">Всего</p>
+              <div class="cart-list__product-remove-label"></div>
+            </div>
+            <div class="alert alert--warning alert--cart">
+              <div class="alert__wrap"><span class="alert__message" data-notify="message">Товары отсутствуют в корзине!</span><a href="#" target="_blank" data-notify="url"></a>
+              </div>
+            </div>
+          </div>
+          <div class="cart-list__total disable">
+            <div class="cart-list__total-item"><span class="cart-list__total-text">Сумма:</span>
+              <div class="cart-list__price">0</div>
+            </div>
+            <div class="cart-list__total-item"><span class="cart-list__total-text">Доставка с фиксированной стоимостью доставки:</span>
+              <div class="cart-list__price">0</div>
+            </div>
+            <div class="cart-list__total-item"><span class="cart-list__total-text">Итого:</span>
+              <div class="cart-list__price">0</div>
+            </div>
+          </div>
+          <div class="cart-list__checkout"><a class="btn btn--fill-general" href="/hitman/category">Продолжить покупки</a><a class="btn btn--fill-accent disable" href="/hitman/checkout">Оформить заказ</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-above">
+      <div class="container">
+        <div class="footer-above__wrap">
+          <div class="footer-above__phone">
+            <p><span>пн-пт: </span>10:00 - 18:00 <br><span>сб: </span>10:00 - 13:00</p><a href="tel:380503433223">+38 (050) 343-32-23</a>
+          </div>
+          <div class="footer-above__mail">
+            <p>Orders<br>support</p><a href="mailto:hitman.com.ua@gmail.com">hitman.com.ua@gmail.com</a>
+          </div>
+          <div class="footer-above__socials"><a href="http://facebook.com"><img src="/hitman/images/ic/socials/facebook.svg" alt="facebook"></a><a href="http://instagram.com"><img src="/hitman/images/ic/socials/instagram.svg" alt="instagram"></a></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="footer__wrap row">
+            <div class="footer__block">
+              <h4 class="h3 footer__title">Информация</h4>
+              <ul class="footer-nav">
+                <li><a class="footer-nav__item" href="/hitman/abaut-us">О нас</a></li>
+                <li><a class="footer-nav__item" href="index.php?route=information/information&amp;information_id=6">Доставка</a></li>
+                <li><a class="footer-nav__item" href="index.php?route=information/information&amp;information_id=3">Privacy Policy</a></li>
+                <li><a class="footer-nav__item" href="index.php?route=information/information&amp;information_id=5">Условия пользования</a></li>
+              </ul>
+            </div>
+            <div class="footer__block">
+              <h4 class="h3 footer__title">Информация клиентам</h4>
+              <ul class="footer-nav">
+                <li><a class="footer-nav__item" href="index.php?route=information/contact">Наши контакты</a></li>
+                <li><a class="footer-nav__item" href="index.php?route=account/return/add">Возврат</a></li>
+                <li><a class="footer-nav__item" href="index.php?route=information/sitemap">Карта сайта</a></li>
+              </ul>
+            </div>
+            <div class="footer__block">
+              <h4 class="h3 footer__title">Экстра</h4>
+              <ul class="footer-nav">
+                <li><a class="footer-nav__item" href="index.php?route=product/manufacturer">Бренды</a></li>
+                <li><a class="footer-nav__item" href="index.php?route=account/voucher">Подарочный сертификаты</a></li>
+                <li><a class="footer-nav__item" href="index.php?route=affiliate/login">Аффилиаты</a></li>
+                <li><a class="footer-nav__item" href="index.php?route=product/special">Специальный предложения</a></li>
+              </ul>
+            </div>
+            <div class="footer__block">
+              <h4 class="h3 footer__title">Кабинет</h4>
+              <ul class="footer-nav">
+                <li><a class="footer-nav__item" href="index.php?route=account/login">Ваш профайл</a></li>
+                <li><a class="footer-nav__item" href="index.php?route=account/login">История покупок</a></li>
+                <li><a class="footer-nav__item" href="index.php?route=account/login">Линк 2</a></li>
+                <li><a class="footer-nav__item" href="index.php?route=account/login">Линк 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p class="copiright">© 2017 HitMan. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="/hitman/js/scripts.min.js" type="text/javascript"></script>
+  </body>
+</html>
